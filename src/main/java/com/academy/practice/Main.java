@@ -1,9 +1,12 @@
 package main.java.com.academy.practice;
 
+import exercises.AreaCalculator.AreaCalculator;
 import exercises.BarkingDog.BarkingDog;
 import exercises.DecimalComparator.DecimalComparator;
 import exercises.EqualSumChecker.EqualSumChecker;
+import exercises.EqualityPrinter.EqualityPrinter;
 import exercises.LeapYearCalculator.LeapYearCalculator;
+import exercises.MinutesToYearsAndDaysCalculator.MinutesToYearsAndDaysCalculator;
 import exercises.TeenNumberChecker.TeenNumberChecker;
 import exercises.megabytesconverter.MegaBytesConverter;
 import exercises.positivenegativezero.PositiveNegativeZero;
@@ -78,7 +81,29 @@ public class Main {
         System.out.println(TeenNumberChecker.isTeen(13));
         System.out.println(TeenNumberChecker.isTeen(19));
         System.out.println(TeenNumberChecker.isTeen(20));
+    }
 
+    public static void areaCalculatorExercise(){
+        System.out.println(AreaCalculator.area(5.0));
+        System.out.println(AreaCalculator.area(-1));
+        System.out.println(AreaCalculator.area(5.0, 4.0));
+        System.out.println(AreaCalculator.area(-1.0, 4.0));
+        System.out.println(AreaCalculator.area(1.0, -4.0));
+        System.out.println(AreaCalculator.area(-1.0, -4.0));
+    }
+    public static void minutesToYearsAndDaysCalculatorExercise(){
+        MinutesToYearsAndDaysCalculator.printYearsAndDays(525600);
+        MinutesToYearsAndDaysCalculator.printYearsAndDays(1051200);
+        MinutesToYearsAndDaysCalculator.printYearsAndDays(561600);
+        MinutesToYearsAndDaysCalculator.printYearsAndDays(525500);
+    }
+
+    public static void equalityPrinterExercise(){
+        EqualityPrinter.printEqual(1,1,1);
+        EqualityPrinter.printEqual(1,1,2);
+        EqualityPrinter.printEqual(-1,-1,-1);
+        EqualityPrinter.printEqual(1,2,3);
+        EqualityPrinter.printEqual(-1,1,1);
     }
     public static void main(String[] args) {
         //checkNumberExercise();
@@ -89,5 +114,8 @@ public class Main {
         //decimalComparatorExercise();
         //equalSumCheckerExercise();
         //teenNumberCheckerExercise();
+        //areaCalculatorExercise();
+        //minutesToYearsAndDaysCalculatorExercise();
+        equalityPrinterExercise();
     }
 }
