@@ -7,6 +7,11 @@ import exercises.EqualSumChecker.EqualSumChecker;
 import exercises.EqualityPrinter.EqualityPrinter;
 import exercises.LeapYearCalculator.LeapYearCalculator;
 import exercises.MinutesToYearsAndDaysCalculator.MinutesToYearsAndDaysCalculator;
+import exercises.NumberInWord.NumberInWord;
+import exercises.NumberOfDaysInMonth.NumberOfDaysInMonth;
+import exercises.NumberPalindrome.NumberPalindrome;
+import exercises.PlayingCat.PlayingCat;
+import exercises.SumOdd.SumOdd;
 import exercises.TeenNumberChecker.TeenNumberChecker;
 import exercises.megabytesconverter.MegaBytesConverter;
 import exercises.positivenegativezero.PositiveNegativeZero;
@@ -105,6 +110,45 @@ public class Main {
         EqualityPrinter.printEqual(1,2,3);
         EqualityPrinter.printEqual(-1,1,1);
     }
+
+    public static void playingCatExercise(){
+        System.out.println(PlayingCat.isCatPlaying(true,10));
+        System.out.println(PlayingCat.isCatPlaying(false,36));
+        System.out.println(PlayingCat.isCatPlaying(false,35));
+        System.out.println(PlayingCat.isCatPlaying(true,36));
+        System.out.println(PlayingCat.isCatPlaying(true,45));
+    }
+    public static void numberInWordExercise(){
+        NumberInWord.printNumberInWord(0);
+        NumberInWord.printNumberInWord(9);
+        NumberInWord.printNumberInWord(-1);
+        NumberInWord.printNumberInWord(10);
+    }
+
+    public static void numberOfDaysInMonthExercise(){
+        System.out.println(NumberOfDaysInMonth.getDaysInMonth(1,2020));
+        System.out.println(NumberOfDaysInMonth.getDaysInMonth(2,2020));
+        System.out.println(NumberOfDaysInMonth.getDaysInMonth(2,2018));
+        System.out.println(NumberOfDaysInMonth.getDaysInMonth(-1,2020));
+        System.out.println(NumberOfDaysInMonth.getDaysInMonth(1,-2020));
+        System.out.println(NumberOfDaysInMonth.getDaysInMonth(4,2018));
+    }
+
+    public static void sumOddExercise(){
+        System.out.println(SumOdd.sumOdd(1, 100));
+        System.out.println(SumOdd.sumOdd(-1, 100));
+        System.out.println(SumOdd.sumOdd(100, 100));
+        System.out.println(SumOdd.sumOdd(13, 13));
+        System.out.println(SumOdd.sumOdd(100, -100));
+        System.out.println(SumOdd.sumOdd(100, 1000));
+    }
+
+    public static void numberPalindromeExercise(){
+        System.out.println(NumberPalindrome.isPalindrome(-1221));
+        System.out.println(NumberPalindrome.isPalindrome(707));
+        System.out.println(NumberPalindrome.isPalindrome(11212));
+    }
+
     public static void main(String[] args) {
         //checkNumberExercise();
         //speedConverterExercise();
@@ -116,6 +160,11 @@ public class Main {
         //teenNumberCheckerExercise();
         //areaCalculatorExercise();
         //minutesToYearsAndDaysCalculatorExercise();
-        equalityPrinterExercise();
+        //equalityPrinterExercise();
+        //playingCatExercise();
+        //numberInWordExercise();
+        //numberOfDaysInMonthExercise();
+        //sumOddExercise();
+        numberPalindromeExercise();
     }
 }
