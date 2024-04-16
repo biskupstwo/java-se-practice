@@ -5,12 +5,16 @@ import exercises.BarkingDog.BarkingDog;
 import exercises.DecimalComparator.DecimalComparator;
 import exercises.EqualSumChecker.EqualSumChecker;
 import exercises.EqualityPrinter.EqualityPrinter;
+import exercises.EvenDigitSum.EvenDigitSum;
+import exercises.FirstAndLastDigitSum.FirstAndLastDigitSum;
+import exercises.LastDigitChecker.LastDigitChecker;
 import exercises.LeapYearCalculator.LeapYearCalculator;
 import exercises.MinutesToYearsAndDaysCalculator.MinutesToYearsAndDaysCalculator;
 import exercises.NumberInWord.NumberInWord;
 import exercises.NumberOfDaysInMonth.NumberOfDaysInMonth;
 import exercises.NumberPalindrome.NumberPalindrome;
 import exercises.PlayingCat.PlayingCat;
+import exercises.SharedDigit.SharedDigit;
 import exercises.SumOdd.SumOdd;
 import exercises.TeenNumberChecker.TeenNumberChecker;
 import exercises.megabytesconverter.MegaBytesConverter;
@@ -149,6 +153,35 @@ public class Main {
         System.out.println(NumberPalindrome.isPalindrome(11212));
     }
 
+    public static void firstAndLastDigitSumExercise(){
+        System.out.println(FirstAndLastDigitSum.sumFirstAndLastDigit(252));
+        System.out.println(FirstAndLastDigitSum.sumFirstAndLastDigit(257));
+        System.out.println(FirstAndLastDigitSum.sumFirstAndLastDigit(0));
+        System.out.println(FirstAndLastDigitSum.sumFirstAndLastDigit(5));
+        System.out.println(FirstAndLastDigitSum.sumFirstAndLastDigit(-10));
+        System.out.println(FirstAndLastDigitSum.sumFirstAndLastDigit(11));
+    }
+
+    public static void evenDigitSumExercise(){
+        System.out.println(EvenDigitSum.getEvenDigitSum(123456789));
+        System.out.println(EvenDigitSum.getEvenDigitSum(252));
+        System.out.println(EvenDigitSum.getEvenDigitSum(-22));
+        System.out.println(EvenDigitSum.getEvenDigitSum(22));
+        System.out.println(EvenDigitSum.getEvenDigitSum(2));
+        System.out.println(EvenDigitSum.getEvenDigitSum(0));
+    }
+
+    public static void sharedDigitExercise(){
+        System.out.println(SharedDigit.hasSharedDigit(12,23));
+        System.out.println(SharedDigit.hasSharedDigit(9,99));
+        System.out.println(SharedDigit.hasSharedDigit(15,55));
+    }
+
+    public static void lastDigitCheckerExercise(){
+        System.out.println(LastDigitChecker.hasSameLastDigit(41,22,71));
+        System.out.println(LastDigitChecker.hasSameLastDigit(23,32,42));
+        System.out.println(LastDigitChecker.hasSameLastDigit(9,99,999));
+    }
     public static void main(String[] args) {
         //checkNumberExercise();
         //speedConverterExercise();
@@ -165,6 +198,10 @@ public class Main {
         //numberInWordExercise();
         //numberOfDaysInMonthExercise();
         //sumOddExercise();
-        numberPalindromeExercise();
+        //numberPalindromeExercise();
+        //firstAndLastDigitSumExercise();
+        //evenDigitSumExercise();
+        //sharedDigitExercise();
+        lastDigitCheckerExercise();
     }
 }
