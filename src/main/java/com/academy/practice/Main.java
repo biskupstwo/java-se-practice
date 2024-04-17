@@ -216,6 +216,17 @@ public class Main {
         NumberToWords.numberToWords(-12);
     }
 
+    public static boolean isPalindrome(String input){
+        boolean result;
+        String reversedString = "";
+        for (int i = input.length()-1; i >= 0; i--){
+            reversedString += input.charAt(i);
+        }
+        result = input.equals(reversedString);
+
+        return result;
+    }
+
     public static void main(String[] args) {
         //checkNumberExercise();
         //speedConverterExercise();
@@ -240,6 +251,7 @@ public class Main {
         //allFactorsExercise();
         //greatestCommonDivisorExercise();
         //perfectNumberExercise();
-        numberToWords();
+        //numberToWords();
+        //System.out.println(isPalindrome("aba"));
     }
 }
