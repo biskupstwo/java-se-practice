@@ -218,11 +218,12 @@ public class Main {
 
     public static boolean isPalindrome(String input){
         boolean result;
+        String candidate = input.toLowerCase();
         String reversedString = "";
-        for (int i = input.length()-1; i >= 0; i--){
-            reversedString += input.charAt(i);
+        for (int i = candidate.length()-1; i >= 0; i--){
+            reversedString += candidate.charAt(i);
         }
-        result = input.equals(reversedString);
+        result = candidate.equals(reversedString);
 
         return result;
     }
@@ -252,6 +253,6 @@ public class Main {
         //greatestCommonDivisorExercise();
         //perfectNumberExercise();
         //numberToWords();
-        //System.out.println(isPalindrome("aba"));
+        System.out.println(isPalindrome("Aba"));
     }
 }
