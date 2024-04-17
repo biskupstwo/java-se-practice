@@ -8,11 +8,19 @@ public class LastDigitChecker {
         int firstParameterLastDigit = firstParameter%10;
         int secondParameterLastDigit = secondParameter%10;
         int thirdParameterLastDigit = thirdParameter%10;
-        if ((firstParameter >= 10 && firstParameter <= 1000) && (secondParameter >= 10 && secondParameter <= 1000) && (thirdParameter >= 10 && thirdParameter <= 1000)){
+        if (isValid(firstParameter) && isValid(secondParameter) && isValid(thirdParameter)){
             result = firstParameterLastDigit == secondParameterLastDigit || firstParameterLastDigit == thirdParameterLastDigit || secondParameterLastDigit == thirdParameterLastDigit;
         }else{
             result = false;
         }
+
+        return result;
+    }
+
+    public static boolean isValid(int number){
+        boolean result;
+
+        result = number >= 10 && number <= 1000;
 
         return result;
     }

@@ -1,5 +1,6 @@
 package main.java.com.academy.practice;
 
+import exercises.AllFactors.AllFactors;
 import exercises.AreaCalculator.AreaCalculator;
 import exercises.BarkingDog.BarkingDog;
 import exercises.DecimalComparator.DecimalComparator;
@@ -7,12 +8,15 @@ import exercises.EqualSumChecker.EqualSumChecker;
 import exercises.EqualityPrinter.EqualityPrinter;
 import exercises.EvenDigitSum.EvenDigitSum;
 import exercises.FirstAndLastDigitSum.FirstAndLastDigitSum;
+import exercises.GreatestCommonDivisor.GreatestCommonDivisor;
 import exercises.LastDigitChecker.LastDigitChecker;
 import exercises.LeapYearCalculator.LeapYearCalculator;
 import exercises.MinutesToYearsAndDaysCalculator.MinutesToYearsAndDaysCalculator;
 import exercises.NumberInWord.NumberInWord;
 import exercises.NumberOfDaysInMonth.NumberOfDaysInMonth;
 import exercises.NumberPalindrome.NumberPalindrome;
+import exercises.NumberToWords.NumberToWords;
+import exercises.PerfectNumber.PerfectNumber;
 import exercises.PlayingCat.PlayingCat;
 import exercises.SharedDigit.SharedDigit;
 import exercises.SumOdd.SumOdd;
@@ -182,6 +186,36 @@ public class Main {
         System.out.println(LastDigitChecker.hasSameLastDigit(23,32,42));
         System.out.println(LastDigitChecker.hasSameLastDigit(9,99,999));
     }
+
+    public static void allFactorsExercise(){
+        AllFactors.printFactors(6);
+        AllFactors.printFactors(32);
+        AllFactors.printFactors(10);
+        AllFactors.printFactors(-1);
+    }
+
+    public static void greatestCommonDivisorExercise(){
+        System.out.println(GreatestCommonDivisor.getGreatestCommonDivisor(25,15));
+        System.out.println(GreatestCommonDivisor.getGreatestCommonDivisor(12,30));
+        System.out.println(GreatestCommonDivisor.getGreatestCommonDivisor(9,18));
+        System.out.println(GreatestCommonDivisor.getGreatestCommonDivisor(81,153));
+        System.out.println(GreatestCommonDivisor.getGreatestCommonDivisor(153,81));
+    }
+
+    public static void perfectNumberExercise(){
+        System.out.println(PerfectNumber.isPerfectNumber(6));
+        System.out.println(PerfectNumber.isPerfectNumber(28));
+        System.out.println(PerfectNumber.isPerfectNumber(5));
+        System.out.println(PerfectNumber.isPerfectNumber(-1));
+    }
+
+    public static void numberToWords(){
+        NumberToWords.numberToWords(123);
+        NumberToWords.numberToWords(1010);
+        NumberToWords.numberToWords(1000);
+        NumberToWords.numberToWords(-12);
+    }
+
     public static void main(String[] args) {
         //checkNumberExercise();
         //speedConverterExercise();
@@ -202,6 +236,10 @@ public class Main {
         //firstAndLastDigitSumExercise();
         //evenDigitSumExercise();
         //sharedDigitExercise();
-        lastDigitCheckerExercise();
+        //lastDigitCheckerExercise();
+        //allFactorsExercise();
+        //greatestCommonDivisorExercise();
+        //perfectNumberExercise();
+        numberToWords();
     }
 }
