@@ -21,10 +21,14 @@ import exercises.NumberPalindrome.NumberPalindrome;
 import exercises.NumberToWords.NumberToWords;
 import exercises.PaintJob.PaintJob;
 import exercises.PerfectNumber.PerfectNumber;
+import exercises.Person.Person;
 import exercises.PlayingCat.PlayingCat;
+import exercises.Point.Point;
 import exercises.SharedDigit.SharedDigit;
+import exercises.SimpleCalculator.SimpleCalculator;
 import exercises.SumOdd.SumOdd;
 import exercises.TeenNumberChecker.TeenNumberChecker;
+import exercises.WallArea.Wall;
 import exercises.megabytesconverter.MegaBytesConverter;
 import exercises.positivenegativezero.PositiveNegativeZero;
 import exercises.speedconverter.SpeedConverter;
@@ -261,6 +265,55 @@ public class Main {
         System.out.println(LargestPrime.getLargestPrime(45));
         System.out.println(LargestPrime.getLargestPrime(-1));
     }
+
+    public static void simpleCalculatorExercise(){
+        SimpleCalculator calculator = new SimpleCalculator();
+        calculator.setFirstNumber(5.0);
+        calculator.setSecondNumber(4);
+        System.out.println("add= "+ calculator.getAdditionResult());
+        System.out.println("subtract= "+ calculator.getSubtractionResult());
+        calculator.setFirstNumber(5.25);
+        calculator.setSecondNumber(0);
+        System.out.println("multiply= " + calculator.getMultiplicationResult());
+        System.out.println("divide= " + calculator.getDivisionResult());
+    }
+
+    public static void personExercise(){
+        Person person = new Person();
+        person.setFirstName("");
+        person.setLastName("");
+        person.setAge(10);
+        System.out.println("fullName= " + person.getFullName());
+        System.out.println("teen= " + person.isTeen());
+        person.setFirstName("John");
+        person.setAge(18);
+        System.out.println("fullName= " + person.getFullName());
+        System.out.println("teen= " + person.isTeen());
+        person.setLastName("Smith");
+        System.out.println("fullName= " + person.getFullName());
+    }
+
+    public static void wallAreaExercise(){
+        Wall wall = new Wall(5,4);
+        System.out.println("area=" + wall.getArea());
+        wall.setHeight(-1.5);
+        System.out.println("width=" + wall.getWidth());
+        System.out.println("height=" + wall.getHeight());
+        System.out.println("area=" + wall.getArea());
+        Wall secondWall = new Wall();
+        System.out.println("width=" + secondWall.getWidth());
+        System.out.println("height=" + secondWall.getHeight());
+    }
+
+    public static void pointExercise(){
+        Point first = new Point(6,5);
+        Point second = new Point(3,1);
+        System.out.println("distance(0,0)= " + first.distance());
+        System.out.println("distance(second)= " + first.distance(second));
+        System.out.println("distance(2,2)= " + first.distance(2,2));
+        Point point = new Point();
+        System.out.println("distance()= " + point.distance());
+    }
     public static void main(String[] args) {
         //checkNumberExercise();
         //speedConverterExercise();
@@ -288,8 +341,12 @@ public class Main {
         //numberToWords();
         //System.out.println(isPalindrome("Aba"));
         //flourPackProblemExercise();
-        largestPrimeExercise();
+        //largestPrimeExercise();
         //InputCalculator.inputThenPrintSumAndAverage();
         //paintJobExercise();
+        //simpleCalculatorExercise();
+        //personExercise();
+        //wallAreaExercise();
+        pointExercise();
     }
 }
