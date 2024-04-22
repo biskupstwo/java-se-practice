@@ -3,6 +3,12 @@ package main.java.com.academy.practice;
 import exercises.AllFactors.AllFactors;
 import exercises.AreaCalculator.AreaCalculator;
 import exercises.BarkingDog.BarkingDog;
+import exercises.CarpetCostCalculator.Calculator;
+import exercises.CarpetCostCalculator.Carpet;
+import exercises.CarpetCostCalculator.Floor;
+import exercises.ComplexOperations.ComplexNumber;
+import exercises.Cylinder.Circle;
+import exercises.Cylinder.Cylinder;
 import exercises.DecimalComparator.DecimalComparator;
 import exercises.EqualSumChecker.EqualSumChecker;
 import exercises.EqualityPrinter.EqualityPrinter;
@@ -10,7 +16,6 @@ import exercises.EvenDigitSum.EvenDigitSum;
 import exercises.FirstAndLastDigitSum.FirstAndLastDigitSum;
 import exercises.FlourPackProblem.FlourPackProblem;
 import exercises.GreatestCommonDivisor.GreatestCommonDivisor;
-import exercises.InputCalculator.InputCalculator;
 import exercises.LargestPrime.LargestPrime;
 import exercises.LastDigitChecker.LastDigitChecker;
 import exercises.LeapYearCalculator.LeapYearCalculator;
@@ -24,6 +29,8 @@ import exercises.PerfectNumber.PerfectNumber;
 import exercises.Person.Person;
 import exercises.PlayingCat.PlayingCat;
 import exercises.Point.Point;
+import exercises.PoolArea.Cuboid;
+import exercises.PoolArea.Rectangle;
 import exercises.SharedDigit.SharedDigit;
 import exercises.SimpleCalculator.SimpleCalculator;
 import exercises.SumOdd.SumOdd;
@@ -314,6 +321,57 @@ public class Main {
         Point point = new Point();
         System.out.println("distance()= " + point.distance());
     }
+
+    public static void carpetCostCalculatorExercise(){
+        Carpet carpet = new Carpet(3.5);
+        Floor floor = new Floor(2.75, 4.0);
+        Calculator calculator = new Calculator(carpet, floor);
+        System.out.println("total= " + calculator.getTotalCost());
+        carpet = new Carpet(1.5);
+        floor = new Floor(5.4, 4.5);
+        calculator = new Calculator(carpet, floor);
+        System.out.println("total= " + calculator.getTotalCost());
+    }
+
+    public static void complexNumberExercise(){
+        ComplexNumber one = new ComplexNumber(1.0, 1.0);
+        ComplexNumber number = new ComplexNumber(2.5, -1.5);
+        one.add(1,1);
+        System.out.println("one.real= " + one.getReal());
+        System.out.println("one.imaginary= " + one.getImaginary());
+        one.subtract(number);
+        System.out.println("one.real= " + one.getReal());
+        System.out.println("one.imaginary= " + one.getImaginary());
+        number.subtract(one);
+        System.out.println("number.real= " + number.getReal());
+        System.out.println("number.imaginary= " + number.getImaginary());
+    }
+
+    public static void cylinderExercise(){
+        Circle circle = new Circle(3.75);
+        System.out.println("circle.radius= " + circle.getRadius());
+        System.out.println("circle.area= " + circle.getArea());
+        Cylinder cylinder = new Cylinder(5.55, 7.25);
+        System.out.println("cylinder.radius= " + cylinder.getRadius());
+        System.out.println("cylinder.height= " + cylinder.getHeight());
+        System.out.println("cylinder.area= " + cylinder.getArea());
+        System.out.println("cylinder.volume= " + cylinder.getVolume());
+
+    }
+
+    public static void poolAreaExercise(){
+        Rectangle rectangle = new Rectangle(5, 10);
+        System.out.println("rectangle.width= " + rectangle.getWidth());
+        System.out.println("rectangle.length= " + rectangle.getLength());
+        System.out.println("rectangle.area= " + rectangle.getArea());
+        Cuboid cuboid = new Cuboid(5,10,5);
+        System.out.println("cuboid.width= " + cuboid.getWidth());
+        System.out.println("cuboid.length= " + cuboid.getLength());
+        System.out.println("cuboid.area= " + cuboid.getArea());
+        System.out.println("cuboid.height= " + cuboid.getHeight());
+        System.out.println("cuboid.volume= " + cuboid.getVolume());
+
+    }
     public static void main(String[] args) {
         //checkNumberExercise();
         //speedConverterExercise();
@@ -347,6 +405,10 @@ public class Main {
         //simpleCalculatorExercise();
         //personExercise();
         //wallAreaExercise();
-        pointExercise();
+        //pointExercise();
+        //carpetCostCalculatorExercise();
+        //complexNumberExercise();
+        //cylinderExercise();
+        poolAreaExercise();
     }
 }
