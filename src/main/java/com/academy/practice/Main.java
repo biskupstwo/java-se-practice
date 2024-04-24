@@ -24,6 +24,7 @@ import exercises.GreatestCommonDivisor.GreatestCommonDivisor;
 import exercises.LargestPrime.LargestPrime;
 import exercises.LastDigitChecker.LastDigitChecker;
 import exercises.LeapYearCalculator.LeapYearCalculator;
+import exercises.MinimumElement.MinimumElement;
 import exercises.MinutesToYearsAndDaysCalculator.MinutesToYearsAndDaysCalculator;
 import exercises.NumberInWord.NumberInWord;
 import exercises.NumberOfDaysInMonth.NumberOfDaysInMonth;
@@ -40,8 +41,10 @@ import exercises.Polymorphism.Holden;
 import exercises.Polymorphism.Mitsubishi;
 import exercises.PoolArea.Cuboid;
 import exercises.PoolArea.Rectangle;
+import exercises.ReverseArray.ReverseArray;
 import exercises.SharedDigit.SharedDigit;
 import exercises.SimpleCalculator.SimpleCalculator;
+import exercises.SortedArray.SortedArray;
 import exercises.SumOdd.SumOdd;
 import exercises.TeenNumberChecker.TeenNumberChecker;
 import exercises.WallArea.Wall;
@@ -456,6 +459,22 @@ public class Main {
 
 
     }
+
+    public static void sortedArrayExercise(){
+        int[] array = SortedArray.getIntegers(5);
+        SortedArray.printArray(array);
+        int[] sortedArray = SortedArray.sortIntegers(array);
+        SortedArray.printArray(sortedArray);
+    }
+
+    public static void minimumElementExercise(){
+        int[] minElementArray = MinimumElement.readElements(5);
+        System.out.printf("minValue: %d", MinimumElement.findMin(minElementArray));
+    }
+
+    public static void reverseArrayExercise(){
+        ReverseArray.reverse(new int[]{1, 2, 3, 4, 5});
+    }
     public static void main(String[] args) {
         //checkNumberExercise();
         //speedConverterExercise();
@@ -497,6 +516,9 @@ public class Main {
         //compositionExercise();
         //encapsulationExercise();
         //polymorphismExercise();
-        billsBurgerExercise();
+        //billsBurgerExercise();
+        //sortedArrayExercise();
+        //minimumElementExercise();
+        reverseArrayExercise();
     }
 }
