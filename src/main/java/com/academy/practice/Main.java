@@ -26,6 +26,8 @@ import exercises.LastDigitChecker.LastDigitChecker;
 import exercises.LeapYearCalculator.LeapYearCalculator;
 import exercises.MinimumElement.MinimumElement;
 import exercises.MinutesToYearsAndDaysCalculator.MinutesToYearsAndDaysCalculator;
+import exercises.MobilePhone.Contact;
+import exercises.MobilePhone.MobilePhone;
 import exercises.NumberInWord.NumberInWord;
 import exercises.NumberOfDaysInMonth.NumberOfDaysInMonth;
 import exercises.NumberPalindrome.NumberPalindrome;
@@ -34,6 +36,8 @@ import exercises.PaintJob.PaintJob;
 import exercises.PerfectNumber.PerfectNumber;
 import exercises.Person.Person;
 import exercises.PlayingCat.PlayingCat;
+import exercises.Playlist.Album;
+import exercises.Playlist.Song;
 import exercises.Point.Point;
 import exercises.Polymorphism.Car;
 import exercises.Polymorphism.Ford;
@@ -52,6 +56,9 @@ import exercises.megabytesconverter.MegaBytesConverter;
 import exercises.positivenegativezero.PositiveNegativeZero;
 import exercises.speedconverter.SpeedConverter;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.Scanner;
 
 public class Main {
@@ -251,12 +258,10 @@ public class Main {
             reversedString += candidate.charAt(i);
         }
         result = candidate.equals(reversedString);
-
         return result;
     }
 
     public static void flourPackProblemExercise(){
-
         System.out.println(FlourPackProblem.canPack(1,0,4));
         System.out.println(FlourPackProblem.canPack(1,0,5));
         System.out.println(FlourPackProblem.canPack(0,5,4));
@@ -382,7 +387,6 @@ public class Main {
         System.out.println("cuboid.area= " + cuboid.getArea());
         System.out.println("cuboid.height= " + cuboid.getHeight());
         System.out.println("cuboid.volume= " + cuboid.getVolume());
-
     }
 
     public static void compositionExercise(){
@@ -390,16 +394,12 @@ public class Main {
         Walls wall2 = new Walls("East");
         Walls wall3 = new Walls("South");
         Walls wall4 = new Walls("North");
-
         Ceiling ceiling = new Ceiling(12, 55);
-
         Bed bed = new Bed("Modern", 4, 3, 2, 1);
-
         Lamp lamp = new Lamp("Classic", false, 75);
 
         Bedroom bedRoom = new Bedroom("YOUR NAME HERE", wall1, wall2, wall3, wall4, ceiling,bed, lamp);
         bedRoom.makeBed();
-
         bedRoom.getLamp().turnOn();
     }
 
@@ -411,8 +411,6 @@ public class Main {
         System.out.println("Pages printed was " + pagesPrinted +" new total print count for printer = " +printer.getPagesPrinted());
         pagesPrinted = printer.printPages(2);
         System.out.println("Pages printed was " + pagesPrinted +" new total print count for printer = " +printer.getPagesPrinted());
-
-
     }
 
     public static void polymorphismExercise(){
@@ -435,9 +433,7 @@ public class Main {
         System.out.println(holden.startEngine());
         System.out.println(holden.accelerate());
         System.out.println(holden.brake());
-
     }
-
 
     public static void billsBurgerExercise(){
         Hamburger hamburger = new Hamburger("Basic", "Sausage", 3.56, "White");
@@ -451,13 +447,9 @@ public class Main {
         healthyBurger.addHealthyAddition1("Lentils", 3.41);
         System.out.println("Total Healthy Burger price is  " + healthyBurger.itemizeHamburger());
 
-
-
         DeluxeBurger db = new DeluxeBurger();
         db.addHamburgerAddition3("Should not do this", 50.53);
         System.out.println("Total Deluxe Burger price is " + db.itemizeHamburger());
-
-
     }
 
     public static void sortedArrayExercise(){
@@ -475,6 +467,72 @@ public class Main {
     public static void reverseArrayExercise(){
         ReverseArray.reverse(new int[]{1, 2, 3, 4, 5});
     }
+
+    public static void mobilePhoneExercise(){
+
+        Contact bobContact = Contact.createContact("Bob", "31415926");
+        Contact aliceContact = Contact.createContact("Alice", "16180339");
+        Contact tomContact = Contact.createContact("Tom", "11235813");
+        Contact janeContact = Contact.createContact("Jane", "23571113");
+        Contact newJaneContact = Contact.createContact("Jane", "23571114");
+        ArrayList<Contact> contactsList = new ArrayList<>(Arrays.asList(bobContact, aliceContact, tomContact, janeContact));
+
+        MobilePhone myMobilePhone = new MobilePhone("100100100", contactsList);
+        myMobilePhone.printContacts();
+        System.out.println(myMobilePhone.findContact(janeContact));
+        System.out.println(myMobilePhone.findContact("23571113"));
+        System.out.println(myMobilePhone.queryContact("Jane"));
+        System.out.println(myMobilePhone.updateContact(janeContact, newJaneContact));
+        System.out.println(myMobilePhone.findContact(janeContact));
+        System.out.println(myMobilePhone.findContact("23571113"));
+        System.out.println(myMobilePhone.queryContact("Jane"));
+        myMobilePhone.printContacts();
+        System.out.println(myMobilePhone.removeContact(newJaneContact));
+        myMobilePhone.printContacts();
+        System.out.println(myMobilePhone.addNewContact(janeContact));
+        myMobilePhone.printContacts();
+    }
+
+    public static void playlistExercise(){
+        ArrayList<Album> albums = new ArrayList<>();
+
+        Album album = new Album("Stormbringer", "Deep Purple");
+        album.addSong("Stormbringer", 4.6);
+        album.addSong("Love don't mean a thing", 4.22);
+        album.addSong("Holy man", 4.3);
+        album.addSong("Hold on", 5.6);
+        album.addSong("Lady double dealer", 3.21);
+        album.addSong("You can't do it right", 6.23);
+        album.addSong("High ball shooter", 4.27);
+        album.addSong("The gypsy", 4.2);
+        album.addSong("Soldier of fortune", 3.13);
+        albums.add(album);
+
+        album = new Album("For those about to rock", "AC/DC");
+        album.addSong("For those about to rock", 5.44);
+        album.addSong("I put the finger on you", 3.25);
+        album.addSong("Lets go", 3.45);
+        album.addSong("Inject the venom", 3.33);
+        album.addSong("Snowballed", 4.51);
+        album.addSong("Evil walks", 3.45);
+        album.addSong("C.O.D.", 5.25);
+        album.addSong("Breaking the rules", 5.32);
+        album.addSong("Night of the long knives", 5.12);
+        albums.add(album);
+
+        LinkedList<Song> playList = new LinkedList<Song>();
+        albums.get(0).addToPlaylist("You can't do it right", playList);
+        albums.get(0).addToPlaylist("Holy man", playList);
+        albums.get(0).addToPlaylist("Speed king", playList);  // Does not exist
+        albums.get(0).addToPlaylist(9, playList);
+        albums.get(1).addToPlaylist(3, playList);
+        albums.get(1).addToPlaylist(2, playList);
+        albums.get(1).addToPlaylist(24, playList);  // There is no track 24
+
+        System.out.println(playList);
+
+    }
+
     public static void main(String[] args) {
         //checkNumberExercise();
         //speedConverterExercise();
@@ -519,6 +577,8 @@ public class Main {
         //billsBurgerExercise();
         //sortedArrayExercise();
         //minimumElementExercise();
-        reverseArrayExercise();
+        //reverseArrayExercise();
+        mobilePhoneExercise();
+        playlistExercise();
     }
 }
