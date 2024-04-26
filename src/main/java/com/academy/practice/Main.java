@@ -2,6 +2,7 @@ package main.java.com.academy.practice;
 
 import exercises.AllFactors.AllFactors;
 import exercises.AreaCalculator.AreaCalculator;
+import exercises.Banking.Bank;
 import exercises.BarkingDog.BarkingDog;
 import exercises.BillsBurger.DeluxeBurger;
 import exercises.BillsBurger.Hamburger;
@@ -477,7 +478,10 @@ public class Main {
         Contact newJaneContact = Contact.createContact("Jane", "23571114");
         ArrayList<Contact> contactsList = new ArrayList<>(Arrays.asList(bobContact, aliceContact, tomContact, janeContact));
 
-        MobilePhone myMobilePhone = new MobilePhone("100100100", contactsList);
+        MobilePhone myMobilePhone = new MobilePhone("100100100");
+        for (Contact contact : contactsList){
+            myMobilePhone.addNewContact(contact);
+        }
         myMobilePhone.printContacts();
         System.out.println(myMobilePhone.findContact(janeContact));
         System.out.println(myMobilePhone.findContact("23571113"));
@@ -533,6 +537,23 @@ public class Main {
 
     }
 
+    public static void bankExercise(){
+
+        Bank bank = new Bank("National Australia Bank");
+        bank.addBranch("Adelaide");
+        bank.findBranch("Adelaide");
+
+        bank.addCustomer("Adelaide", "Tim", 50.05);
+        bank.addCustomer("Adelaide", "Mike", 175.34);
+        bank.addCustomer("Adelaide", "Percy", 220.12);
+
+        bank.addCustomerTransaction("Adelaide", "Tim", 44.22);
+        bank.addCustomerTransaction("Adelaide", "Tim", 12.44);
+        bank.addCustomerTransaction("Adelaide", "Mike", 1.65);
+
+        bank.listCustomers("Adelaide", true);
+        bank.listCustomers("Adelaide", false);
+    }
     public static void main(String[] args) {
         //checkNumberExercise();
         //speedConverterExercise();
@@ -578,7 +599,8 @@ public class Main {
         //sortedArrayExercise();
         //minimumElementExercise();
         //reverseArrayExercise();
-        mobilePhoneExercise();
-        playlistExercise();
+        //mobilePhoneExercise();
+        //playlistExercise();
+        bankExercise();
     }
 }
