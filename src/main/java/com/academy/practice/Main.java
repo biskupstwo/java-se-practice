@@ -1,5 +1,9 @@
 package main.java.com.academy.practice;
 
+import exercises.AbstractClass.ListItem;
+import exercises.AbstractClass.MyLinkedList;
+import exercises.AbstractClass.Node;
+import exercises.AbstractClass.SearchTree;
 import exercises.AllFactors.AllFactors;
 import exercises.AreaCalculator.AreaCalculator;
 import exercises.Banking.Bank;
@@ -554,6 +558,41 @@ public class Main {
         bank.listCustomers("Adelaide", true);
         bank.listCustomers("Adelaide", false);
     }
+
+    public static void abstractClassExercise(){
+        ListItem item1 = new Node(1);
+        ListItem item2 = new Node(2);
+        ListItem item22 = new Node(2);
+        ListItem item3 = new Node(3);
+        ListItem item4 = new Node(4);
+        ListItem item5 = new Node(5);
+
+        MyLinkedList linkedList = new MyLinkedList(null);
+        SearchTree searchTree = new SearchTree(null);
+
+        linkedList.addItem(item1);
+        linkedList.addItem(item2);
+        linkedList.addItem(item5);
+        linkedList.addItem(item22);
+        linkedList.addItem(item3);
+        linkedList.addItem(item4);
+
+        searchTree.addItem(item1);
+        searchTree.addItem(item2);
+        searchTree.addItem(item22);
+        searchTree.addItem(item3);
+        searchTree.addItem(item4);
+        searchTree.addItem(item5);
+
+        linkedList.traverse(linkedList.getRoot());
+        searchTree.traverse(searchTree.getRoot());
+
+        linkedList.removeItem(item1);
+        //searchTree.removeItem(item2);
+
+        //linkedList.traverse(linkedList.getRoot());
+        searchTree.traverse(searchTree.getRoot());
+    }
     public static void main(String[] args) {
         //checkNumberExercise();
         //speedConverterExercise();
@@ -601,6 +640,7 @@ public class Main {
         //reverseArrayExercise();
         //mobilePhoneExercise();
         //playlistExercise();
-        bankExercise();
+        //bankExercise();
+        abstractClassExercise();
     }
 }
